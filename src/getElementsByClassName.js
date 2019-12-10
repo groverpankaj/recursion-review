@@ -19,13 +19,12 @@ var getElementsByClassName = function(className
     }
 
     // get classname of the current element
-    let allClasses = currElem.className;
+    let allClasses = currElem.classList;
 
     if (allClasses !== undefined) {   // Undefined - No class
-      let allClassesArray = allClasses.split(' ');
 
-      for(let i = 0; i < allClassesArray.length; i++) {
-        if(allClassesArray[i] === className) {
+      for(let i = 0; i < allClasses.length; i++) {
+        if(allClasses[i] === className) {
           result.push(currElem); break;
         }
       }
